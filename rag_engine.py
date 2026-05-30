@@ -23,7 +23,7 @@ def brain(user_query:str):
 
     docs=vectoreStore.similarity_search(user_query,k=5)
     context="\n".join([doc.page_content for doc in docs ])
-    prompt=PromptTemplate.from_template(template="Answer the user querry {user_query} only from the relevant context {context} if you dont know the answer just say I don't know stictly")
+    prompt=PromptTemplate.from_template(template="Answer the user query {user_query} only from the relevant context {context} if you dont know the answer just say I don't know strictly")
 
     chain=prompt|llm|parser
 
