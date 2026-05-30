@@ -14,12 +14,12 @@ llm = ChatGroq(
     temperature=0.1,
     max_tokens=1024
 )
-
-def brain(user_query:str):
-    vectoreStore=Chroma(
+vectoreStore=Chroma(
         persist_directory="chroma_database",
         embedding_function=embed
     )
+def brain(user_query:str):
+
 
     docs=vectoreStore.similarity_search(user_query,k=5)
     context="\n".join([doc.page_content for doc in docs ])
