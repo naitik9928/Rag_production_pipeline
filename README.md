@@ -36,16 +36,6 @@ rag-qa-system/
 └── logs/                   # System operational tracing log directory (Auto-generated)
 
 
-## 🛠️ Quick Start Guide
-
-### 1. Prerequisites & Environment Setup
-
-# Create and activate virtual environment
-python -m venv venv
-# On Windows:
-.\venv\Scripts\Activate.ps1
-# On Mac/Linux:
-source venv/bin/activate
 
 # Install required modules
 pip install -r requirements.txt
